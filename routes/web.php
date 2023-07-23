@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cliente', function () {
+    return view('TestarForm');
+});
+Route::post('/savecliente', [\App\Http\Controllers\ClienteController::class,'CreatCliente']);
+Route::post('/savepaymente', [\App\Http\Controllers\PagamentoController::class,'savepay']);
